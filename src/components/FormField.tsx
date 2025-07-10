@@ -13,14 +13,14 @@ export const FormField: React.FC<FormFieldProps> = ({ label, value, onChange }) 
   if (isArray) {
     return (
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
+        <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
           {label}
         </label>
         <input
           type="text"
           value={value.join(', ')}
           onChange={(e) => onChange(e.target.value.split(', ').filter(Boolean))}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 rounded-md border shadow-sm text-sm transition-all focus:ring focus:outline-none focus:border-blue-500 min-h-[44px]"
           placeholder="Enter items separated by commas"
         />
       </div>
@@ -30,14 +30,13 @@ export const FormField: React.FC<FormFieldProps> = ({ label, value, onChange }) 
   if (isLongText) {
     return (
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
+        <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
           {label}
         </label>
         <textarea
           value={value || ''}
           onChange={(e) => onChange(e.target.value)}
-          rows={3}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 rounded-md border shadow-sm text-sm min-h-[100px] resize-y transition-all focus:ring focus:outline-none focus:border-blue-500"
         />
       </div>
     );
@@ -45,15 +44,15 @@ export const FormField: React.FC<FormFieldProps> = ({ label, value, onChange }) 
 
   return (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-gray-700 mb-2 capitalize">
+      <label className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-300 capitalize">
         {label}
       </label>
       <input
         type={label.includes('date') || label.includes('Date') ? 'month' : 'text'}
         value={value || ''}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-3 py-2 rounded-md border shadow-sm text-sm transition-all focus:ring focus:outline-none focus:border-blue-500 min-h-[44px]"
       />
     </div>
   );
-};
+}
