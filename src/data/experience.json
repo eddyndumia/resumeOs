@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Senior Software Engineer",
+    "company": "Tech Corp",
+    "startDate": "2022-01",
+    "endDate": "Present",
+    "description": "Led development of scalable web applications using React and Node.js"
+  },
+  {
+    "id": "2",
+    "title": "Software Engineer",
+    "company": "StartupXYZ",
+    "startDate": "2020-06",
+    "endDate": "2021-12",
+    "description": "Built full-stack applications and improved system performance by 40%"
+  }
+]

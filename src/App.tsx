@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { WindowShell } from './components/WindowShell'
 import { Sidebar } from './components/Sidebar'
 import { ContentView } from './components/ContentView'
@@ -51,6 +52,14 @@ function App() {
         onContextMenu={handleContextMenu}
       />
       <ContentView selectedId={selectedId} />
+      <div className="absolute bottom-4 right-4">
+        <Link
+          to="/admin"
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm"
+        >
+          Admin
+        </Link>
+      </div>
       <ContextMenu
         options={getMenuOptions()}
         position={{ x: menuState.x, y: menuState.y }}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "AWS Certified Solutions Architect",
+    "issuer": "Amazon Web Services",
+    "date": "2023-03",
+    "credentialId": "AWS-SAA-123456"
+  },
+  {
+    "id": "2",
+    "title": "React Developer Certification",
+    "issuer": "Meta",
+    "date": "2022-11",
+    "credentialId": "META-REACT-789012"
+  }
+]

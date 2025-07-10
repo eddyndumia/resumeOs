@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "ResumeOS",
+    "description": "A personal resume website that looks like an OS file explorer",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "url": "https://github.com/user/resumeos"
+  },
+  {
+    "id": "2",
+    "title": "Task Manager App",
+    "description": "Full-stack task management application with real-time updates",
+    "technologies": ["Vue.js", "Express", "MongoDB"],
+    "url": "https://taskmanager.example.com"
+  }
+]
