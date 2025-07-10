@@ -15,7 +15,7 @@ export const ContentView: React.FC<ContentViewProps> = ({ selectedId }) => {
   };
 
   return (
-    <div className="flex-1 bg-[#fafafa] p-4">
+    <div className="content flex-1 bg-[#fafafa] p-4">
       {selectedId ? (
         <div>
           <h2 className="text-lg font-semibold text-[#333] mb-4">

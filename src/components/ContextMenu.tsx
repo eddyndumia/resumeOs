@@ -36,13 +36,13 @@ export const ContextMenu: React.FC<ContextMenuProps> = ({ options, position, vis
 
   return (
     <div
-      className="absolute bg-white border border-[#ccc] rounded shadow-[0_2px_8px_rgba(0,0,0,0.15)] py-1 w-[180px] z-[1000]"
+      className="context-menu absolute bg-white border border-[#ccc] rounded shadow-[0_2px_8px_rgba(0,0,0,0.15)] py-1 w-[180px] z-[1000]"
       style={{ left: position.x, top: position.y }}
     >
       {options.map((option, index) => (
         <div
           key={index}
-          className="px-4 py-1.5 text-sm text-[#333] cursor-pointer hover:bg-[#f0f0f0]"
+          className="context-menu-item px-4 py-1.5 text-sm text-[#333] cursor-pointer hover:bg-[#f0f0f0]"
           onClick={() => {
             option.action();
             onHide();
