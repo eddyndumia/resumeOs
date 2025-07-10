@@ -11,6 +11,7 @@ interface SidebarProps {
   items: SidebarItem[];
   selectedId: string;
   onSelect: (id: string) => void;
+  onContextMenu: (id: string, type: 'folder' | 'file', event: React.MouseEvent) => void;
 }
 
 const FolderIcon = () => (
@@ -19,7 +20,7 @@ const FolderIcon = () => (
   </svg>
 );
 
-export const Sidebar: React.FC<SidebarProps> = ({ items, selectedId, onSelect }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ items, selectedId, onSelect, onContextMenu }) => {
   const hardcodedItems = [
     { id: 'exp', label: '/Experience', type: 'folder' as const, children: [] },
     { id: 'proj', label: '/Projects', type: 'folder' as const, children: [] },
@@ -36,6 +37,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ items, selectedId, onSelect })
               selectedId === item.id ? 'bg-[#dde1e5] border-l-3 border-l-[#007aff]' : ''
             }`}
             onClick={() => onSelect(item.id)}
+            onContextMenu={(e) => {
+              e.preventDefault();
+              onContextMenu(item.id, item.type, e);
+            }}
           >
             <FolderIcon />
             <span className="ml-2">{item.label}</span>
